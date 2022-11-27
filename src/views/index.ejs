@@ -1,0 +1,13 @@
+<%- include('partials/header', { title, isActive, users}); %>
+    <h1><%= title %></h1>
+    <% if(isActive){  %>
+       <p>Lorem 100 ipsum dolor sit amet consectetur, adipisicing elit. Odio, fuga quo quos laboriosam, cupiditate, unde non nemo neque ratione deleniti quibusdam excepturi magni voluptas dolore velit. Laborum porro dicta ut debitis ipsum reiciendis hic mollitia blanditiis praesentium sed cumque, libero dolores similique possimus corrupti aut numquam ratione sint omnis, odit deserunt aliquid! Enim inventore quis voluptate soluta reprehenderit nisi quae et, amet nesciunt facilis commodi provident, nulla maiores nemo error suscipit magnam voluptatibus voluptatum nihil consequatur dolorem. Eos ipsum itaque molestiae earum perspiciatis blanditiis vero quos. Obcaecati maxime provident quod, quam ratione temporibus, ab, natus amet consequuntur recusandae beatae culpa.</p>
+    <% } else { %>
+        <p>Lorem 10 ipsum dolor sit amet consectetur adipisicing elit. Quidem corporis impedit inventore voluptatem perferendis nobis. At nobis nemo delectus quibusdam natus! Eius nihil error autem dolores deleniti accusamus, asperiores voluptates?</p>
+    <% } %>
+    <ul>
+        <% for(let i = 0; i < users.length; i++){ %>
+            <li><%= users[i].name %> <%= users[i].lastName %></li>
+        <% } %>
+    </ul>
+<%- include('partials/footer'); %>
